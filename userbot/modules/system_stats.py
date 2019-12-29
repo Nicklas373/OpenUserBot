@@ -126,7 +126,7 @@ async def amireallyalive(on):
                      "HANA-CI Userbot is running (˃ᴗ˂) \n\n"
                      f"Telethon version: {version.__version__} \n"
                      f"Python: {python_version()} \n"
-                     f"User: {DEFAULTUSER} \n"
+                     f"User: @Nicklas373 \n"
                      "`")    
 
 
