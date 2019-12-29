@@ -20,8 +20,9 @@ from userbot.events import register
 @register(outgoing=True, pattern="^.welcome$")
 async def shalom(e):
     await e.edit(
-    "`こんにちは!! (˃ᴗ˂)`")
-   
+    "\nこんにちは!! (˃ᴗ˂)")
+
+
    CMD_HELP.update({
     'welcome':
     '.welcome\
