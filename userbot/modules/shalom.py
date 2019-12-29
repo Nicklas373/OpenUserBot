@@ -17,14 +17,13 @@ import json
 from userbot import BOTLOG, BOTLOG_CHATID, CMD_HELP, bot
 from userbot.events import register
 
-@register(outgoing=True, pattern="^.welcome$")
+@register(outgoing=True, pattern="^.salam$")
 async def shalom(e):
     await e.edit(
-    "\nこんにちは!! (˃ᴗ˂)")
-
-
-   CMD_HELP.update({
-    'welcome':
-    '.welcome\
+        "\nこんにちは!!")
+    
+    CMD_HELP.update({
+    'salam':
+    '.salam\
 \nUsage: gives a nice SHALOM as output.'
 })
