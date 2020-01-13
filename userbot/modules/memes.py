@@ -930,7 +930,7 @@ async def metoo(hahayes):
     await hahayes.edit(choice(METOOSTR))
 
 
-@register(outgoing=True, pattern="^.Oof$")
+@register(outgoing=True, pattern="^Oof$")
 async def Oof(e):
     t = "Oof"
     for j in range(16):
@@ -938,7 +938,7 @@ async def Oof(e):
         await e.edit(t)
 
                       
-@register(outgoing=True, pattern="^.oem$")
+@register(outgoing=True, pattern="^oem$")
 async def Oem(e):
     t = "Oem"
     for j in range(16):
@@ -948,7 +948,7 @@ async def Oem(e):
 
 
 
-@register(outgoing=True, pattern="^.Oem$")
+@register(outgoing=True, pattern="^Oem$")
 async def Oem(e):
     t = "Oem"
     for j in range(16):
