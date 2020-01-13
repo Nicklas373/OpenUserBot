@@ -20,6 +20,7 @@ from telethon.tl.types import DocumentAttributeSticker
 
 KANGING_STR = [
     "Permisi, nyolong sticker ya :3 ...",
+    "It's look good, may i kang it? :3...",
 ]
 
 
