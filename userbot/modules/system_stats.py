@@ -72,7 +72,7 @@ async def bot_ver(event):
                          "`")
     else:
         await event.edit(
-            "Shame that you don't have git, You're running 5.0 - 'Extended' anyway"
+            "Shame that you don't have git, You're running 9.0 - 'Extended' anyway"
         )
 
 
@@ -119,10 +119,10 @@ async def pipcheck(pip):
         await pip.edit("`Use .help pip to see an example`")
 
 
-@register(outgoing=True, pattern="^.on$")
-async def amireallyalive(on):
-    """ For .on command, check if the bot is running.  """
-    await on.edit("`"
+@register(outgoing=True, pattern="^.alive$")
+async def amireallyalive(alive):
+    """ For .alive command, check if the bot is running.  """
+    await alive.edit("`"
                      "HANA-CI Userbot is running (˃ᴗ˂) \n\n"
                      f"Telethon version: {version.__version__} \n"
                      f"Python: {python_version()} \n"
