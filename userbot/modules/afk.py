@@ -246,7 +246,7 @@ async def afk_on_pm(sender):
                     await sender.reply(f"**{DEFAULTUSER}** Currently my owner is **afk since** {afk_since}.\
                         \n**Because of** `{AFKREASON}`")
                 else:
-                    await sender.replyf(f"👑 {DEFAULTUSER} 👑 Currently my owner is **afk since** {afk_since}.\nand Because of: \n{AFKSK}\n`.` ")
+                    await sender.replyf(f"**{DEFAULTUSER}** Currently my owner is **afk since** {afk_since}.\nand Because of: \n{AFKSK}\n`.` ")
                 USERS.update({sender.sender_id: 1})
                 COUNT_MSG = COUNT_MSG + 1
             elif apprv and sender.sender_id in USERS:
@@ -255,8 +255,8 @@ async def afk_on_pm(sender):
                         await sender.reply(f"**{DEFAULTUSER}** Currently my owner is **afk** since {afk_since}.\
                             \n**Because of ** `{AFKREASON}`")
                     else:
-                       await sender.replyf(f"👑 {DEFAULTUSER} 👑 Currently my owner is **afk since** {afk_since}.\nand Because of: \n{AFKSK}\n`.` ")
-                    USERS.update[sender.sender_id] = USERS[sender.sender_id] + 1
+                       await sender.reply(f"**{DEFAULTUSER}** Currently my owner is **afk since** {afk_since}.\nand Because of: \n{AFKSK}\n`.` ")
+                    USERS[sender.sender_id] = USERS[sender.sender_id] + 1
                     COUNT_MSG = COUNT_MSG + 1
                 else:
                     USERS[sender.sender_id] = USERS[sender.sender_id] + 1
