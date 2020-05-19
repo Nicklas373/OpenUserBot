@@ -133,7 +133,7 @@ async def pipcheck(pip):
 async def amireallyalive(alive):
     """ For .alive command, check if the bot is running.  """
     await alive.edit("`"
-                     "HANA-CI Userbot is running (˃ᴗ˂) \n\n"
+                     "こんにちは ~ HANA-CI Userbot Here (˃ᴗ˂) ~ \n\n"
                      f"Telethon version: {version.__version__} \n"
                      f"Python: {python_version()} \n"
                      f"User: @Nicklas373 \n"
