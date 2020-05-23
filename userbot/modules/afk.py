@@ -98,14 +98,14 @@ async def type_afk_is_not_true(notafk):
     afk_end = back_alive.replace(microsecond=0)
     if ISAFK:
         ISAFK = False
-        msg = await notafk.edit("**I'm back !**")
+        msg = await notafk.edit("**I'm Here :3**")
         time.sleep(3)
         await msg.delete()
         await notafk.client(UpdateProfileRequest(first_name=user.first_name, last_name=last1))
         if BOTLOG:
             await notafk.client.send_message(
                 BOTLOG_CHATID,
-                "You've recieved " + str(COUNT_MSG) + " messages from " +
+                "You've received " + str(COUNT_MSG) + " messages from " +
                 str(len(USERS)) + " chats while you were away",
             )
             for i in USERS:
@@ -166,19 +166,19 @@ async def mention_afk(mention):
                 afk_since = f"`{int(seconds)}s`**"
             if mention.sender_id not in USERS:
                 if AFKREASON:
-                    await mention.reply(f"**{DEFAULTUSER}** Currently my owner is **afk since** {afk_since}.\
-                        \n**Because of ** `{AFKREASON}`")
+                    await mention.reply(f"**{DEFAULTUSER}** Currently my owner is afk since **{afk_since}**.\
+                        \n**Because of **`{AFKREASON}`**")
                 else:
-                    await mention.reply(f"👑 {DEFAULTUSER} 👑 Currently my owner is **afk since** {afk_since}.\nand Because of : \n{AFKSK}\n`.` ")
+                    await mention.reply(f"**{DEFAULTUSER} Currently my owner is afk since **{afk_since}**.\nand Because of : \n**{AFKSK}**\n`.` ")
                 USERS.update({mention.sender_id: 1})
                 COUNT_MSG = COUNT_MSG + 1
             elif mention.sender_id in USERS:
                 if USERS[mention.sender_id] % randint(2, 4) == 0:
                     if AFKREASON:
-                        await mention.reply(f"**{DEFAULTUSER}** Currently my owner is **afk since** {afk_since}.\
+                        await mention.reply(f"**{DEFAULTUSER}** Currently my owner is afk since **{afk_since}**.\
                             \n**Because my King is** `{AFKREASON}`")
                     else:
-                       await mention.reply(f"👑 {DEFAULTUSER} 👑 Currently my owner is **afk since** {afk_since}.\nand Because of : \n{AFKSK}\n`.` ")
+                       await mention.reply(f"**{DEFAULTUSER}** Currently my owner is afk since **{afk_since}**.\nand Because of : \n**{AFKSK}**\n`.` ")
                     USERS[mention.sender_id] = USERS[mention.sender_id] + 1
                     COUNT_MSG = COUNT_MSG + 1
                 else:
