@@ -134,12 +134,10 @@ async def amireallyalive(alive):
     """ For .alive command, check if the bot is running.  """
     logo = ALIVE_LOGO
     output = (""
-             "こんにちは ~ HANA-CI Userbot Here (˃ᴗ˂) ~ \n\n"
-             f"=============================================\n"
-             f"| Telethon version: `{version.__version__}` |\n"
-             f"| Python: `{python_version()}`              |\n"
-             f"| User: `@Nicklas373`                       |\n"
-             f"=============================================\n"
+             "こんにちは!!! ~ HANA-CI Userbot Here (˃ᴗ˂) ~ \n\n"
+             f" Telethon version: `{version.__version__}' \n"
+             f" Python: `{python_version()}` \n"
+             f" User: `@Nicklas373` \n"
              "")
     if ALIVE_LOGO:
         try:
