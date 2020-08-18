@@ -22,7 +22,7 @@ from userbot.events import register
 
 # ========================= CONSTANTS ============================
 AFKSTR = [
-    "`I'm not online for now, Wait for a while or try to reach me in other way :p`",
+    "`I'm not online for now, wait for a while or try to reach me in other way :p`",
     "`Just threw your message here, and maybe i'll read it if i want...`",
     "`Try to reach me on hyperion if you can :p`",
     "`Am i sleep? maybe...`",
@@ -169,16 +169,16 @@ async def mention_afk(mention):
                     await mention.reply(f"**{DEFAULTUSER}** Currently my owner is **afk** since **{afk_since}**.\
                             \n**Because of **`{AFKREASON}`**")
                 else:
-                    await mention.reply(f"**{DEFAULTUSER}** Currently my owner is **afk** since **{afk_since}**.\nand Because of : \n**{AFKSK}**\n`.` ")
+                    await mention.reply(f"**{DEFAULTUSER}** Currently my owner is **afk** since **{afk_since}**.\n and Because of : \n**{AFKSK}**\n`.` ")
                 USERS.update({mention.sender_id: 1})
                 COUNT_MSG = COUNT_MSG + 1
             elif mention.sender_id in USERS:
                 if USERS[mention.sender_id] % randint(2, 4) == 0:
                     if AFKREASON:
                         await mention.reply(f"**{DEFAULTUSER}** Currently my owner is **afk** since **{afk_since}**.\
-                            \n**Because my King is** `{AFKREASON}`")
+                            \n**Because of : **{AFKREASON}**")
                     else:
-                        await mention.reply(f"**{DEFAULTUSER}** Currently my owner is **afk** since **{afk_since}**.\nand Because of : \n**{AFKSK}**\n`.` ")
+                        await mention.reply(f"**{DEFAULTUSER}** Currently my owner is **afk** since **{afk_since}**.\n and Because of : \n**{AFKSK}**\n`.` ")
                     USERS[mention.sender_id] = USERS[mention.sender_id] + 1
                     COUNT_MSG = COUNT_MSG + 1
                 else:
@@ -246,7 +246,7 @@ async def afk_on_pm(sender):
                     await sender.reply(f"**{DEFAULTUSER}** Currently my owner is **afk** since **{afk_since}**.\
                         \n**Because of **`{AFKREASON}`**")
                 else:
-                    await sender.reply(f"**{DEFAULTUSER}** Currently my owner is **afk** since **{afk_since}**.\nand Because of: \n**{AFKSK}**\n`.` ")
+                    await sender.reply(f"**{DEFAULTUSER}** Currently my owner is **afk** since **{afk_since}**.\n and Because of: \n**{AFKSK}**\n`.` ")
                 USERS.update({sender.sender_id: 1})
                 COUNT_MSG = COUNT_MSG + 1
             elif apprv and sender.sender_id in USERS:
@@ -255,7 +255,7 @@ async def afk_on_pm(sender):
                         await sender.reply(f"**{DEFAULTUSER}** Currently my owner is **afk** since **{afk_since}**.\
                             \n**Because of ** `{AFKREASON}`")
                     else:
-                        await sender.reply(f"**{DEFAULTUSER}** Currently my owner is **afk** since **{afk_since}**.\nand Because of: \n**{AFKSK}**\n`.` ")
+                        await sender.reply(f"**{DEFAULTUSER}** Currently my owner is **afk** since **{afk_since}**.\n and Because of: \n**{AFKSK}**\n`.` ")
                     USERS[sender.sender_id] = USERS[sender.sender_id] + 1
                     COUNT_MSG = COUNT_MSG + 1
                 else:
