@@ -1,6 +1,5 @@
 wheel
 aiohttp
-aria2p
 async_generator
 asyncurban
 cowpy
@@ -68,3 +67,6 @@ jotquote
 csvfaker
 pymongo[srv]
 youtube_search
+numpy>=1.11.1
+colour
+geopy
